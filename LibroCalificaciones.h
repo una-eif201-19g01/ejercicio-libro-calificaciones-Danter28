@@ -14,13 +14,31 @@
  */
 
 
-#ifndef LIBROCALIFICACIONES_LIBROCALIFICACIONES_H
-#define LIBROCALIFICACIONES_LIBROCALIFICACIONES_H
+#ifndef LIBROCALIFICACIONES
+#define LIBROCALIFICACIONES
+#include<iostream>
+#include<string>
+#include<sstream>
+using std::string;
+using std::cout;
+using std::endl;
 
-
-class LibroCalificaciones {
+class LibroCalificaciones{
+	
+private:
+	string nombreCurso;
+	int nota;
+	string obtenerRangoLetra();
+public:
+	LibroCalificaciones();
+	LibroCalificaciones(string nc,int n);
+	string obtenerMensaje();
+	string getNombreCurso();
+	int getNota();
+	void setNota(int);
+	void setNombreCurso(string);
 
 };
 
 
-#endif //LIBROCALIFICACIONES_LIBROCALIFICACIONES_H
+#endif //LIBROCALIFICACIONES
